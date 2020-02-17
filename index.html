@@ -1,516 +1,690 @@
-<!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
-<link href='https://static.tumblr.com/vr8wztv/KHzpnokhf/cssreset.css' rel='stylesheet' type='text/css'> 
-<link href="https://static.tumblr.com/0podkko/xIbplezmo/modified_photosets.css" rel="stylesheet"> 
-<link href="https://dl.dropbox.com/s/ldzl7ylhf8lgpp0/sima-v1.css" rel="stylesheet"> 
-<link rel="shortcut icon" href="{Favicon}"> 
-<link href="https://fonts.googleapis.com/css?family={select:body font}:300,300i,400,400i,700,700i|IBM Plex Mono:400,700" rel="stylesheet"> 
-<head> 
+<!DOCTYPE html PUBLIC>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 
-    ===============================================
-        
-        
-        Sima Theme
-        more @ https://spielglocken.tumblr.com
-        
-        Do not alter or remove credit
-                       
-                       
-    ===============================================
-    --> 
-    
-    
-<title>{block:PostSummary}{PostSummary} &mdash; {/block:PostSummary}{block:TagPage}{lang:Posts tagged Tag} &mdash; {/block:TagPage}{block:SearchPage}{lang:Search results for SearchQuery} &mdash; {/block:SearchPage}{Title}</title> 
-{block:Description}
-<meta name="description" content="{MetaDescription}" /> 
-{/block:Description}
-<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<html>
+ 
+<head>
+ 
+<title>{Title}</title>
 
-{block:Hidden} 
-<meta name="select:body font" content="EB Garamond" /> 
-<meta name="select:body font" content="Arimo" /> 
-<meta name="select:body font" content="Cormorant" /> 
-<meta name="select:body font" content="Fira Sans" /> 
-<meta name="select:body font" content="IBM Plex Sans" /> 
-<meta name="select:body font" content="IBM Plex Serif" /> 
-<meta name="select:body font" content="Lora" /> 
-<meta name="select:body font" content="Merriweather" />  
-<meta name="select:body font" content="Noto Serif" /> 
-<meta name="select:body font" content="PT Serif" /> 
-<meta name="select:body font" content="Roboto" /> 
-<meta name="select:body font" content="Roboto Mono" /> 
-<meta name="select:body font" content="Rubik" /> 
-<meta name="select:body font" content="Source Sans Pro" /> 
-<meta name="select:body font" content="Spectral" /> 
-<meta name="select:body font" content="Vollkorn" /> 
+<link rel="shortcut icon" href="{Favicon}">
 
-<meta name="select:layout" content="brick" title="brick masonry" /> 
-<meta name="select:layout" content="grid" /> 
+<!-- Colors by Franchesca (extasisthemes) -->
 
-<meta name="select:text post width" content="500px" /> 
-<meta name="select:text post width" content="550px" /> 
-<meta name="select:text post width" content="600px" /> 
-<meta name="select:text post width" content="700px" /> 
+<!-- Google Fonts Script -->
 
-<meta name="select:post captions" content="display" /> 
-<meta name="select:post captions" content="hidden" /> 
+<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet">
 
-<meta name="select:post tags" content="display" /> 
-<meta name="select:post tags" content="hidden" /> 
+<!-- Font Awesome Script -->
 
-<meta name="color:background" content="#ffffff" />
-<meta name="color:post background" content="#fafafa" /> 
-<meta name="color:text" content="#444444" /> 
-<meta name="color:link" content="#aaaaaa" /> 
-<meta name="color:accent" content="#d2eced" /> 
-<meta name="color:accent text" content="#333333" /> 
-<meta name="color:accent link" content="#677b7b" /> 
-<meta name="color:overlay text" content="#ffffff" /> 
-
-<meta name="text:link 1" content="Lorem ipsum" /> 
-<meta name="text:link 1 url" content="http://" /> 
-<meta name="text:link 2" content="Dolorem sit" /> 
-<meta name="text:link 2 url" content="http://" /> 
-<meta name="text:link 3" content="Consecteturer ad" /> 
-<meta name="text:link 3 url" content="http://" /> 
-<meta name="text:photoset gutter" content="0" /> 
-
-<meta name="if:enable search form" content="1" /> 
-{/block:Hidden}
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 <style type="text/css">
 
-/* colors */
-
-body, form input {color:{color:text}; font-family:'{select:body font}', 'Helvetica', 'Arial', sans-serif;}
-body, .is-perma .info-container {background:{color:background};}
-
-aside {background:{color:post background};}
-aside > div:not(:last-child):not(.blog-title), aside nav:not(:last-child) {border-bottom:1px rgba(0,0,0,.1) solid;}
-
-a, .content a:hover, .entry-date a:hover, header a:hover {color:{color:link};}
-a:hover, .content a, .entry-date a, header a {color:{color:text};}
-.content a:not(.source_tumblelog), .entry-date a {background-image:linear-gradient(90deg, {color:accent} 0%, {color:accent} 100%); background-position:100% calc(100% - .08em); background-size:100% 1px; background-repeat: no-repeat;}
-
-.blog-title, .next-page, .blog-title a, .next-page a {background:{color:accent}; color:{color:accent text};}
-.next-page:hover {background:rgba({RGBcolor:accent},.5); color:{color:accent link};}
-
-.thumbs .quote-body, .thumbs .quote-source, .controls {color:{color:accent text};}
-.is-quote .thumb-content a, .is-quote .thumb-actions a {color:{color:accent link};}
-.is-quote .thumb-content a:hover, .blog-title a:hover, .is-quote .thumb-actions a:hover {color:{color:accent text};}
-.photo-actions a {color:{color:overlay text};}
-
-
-/* posts */
-
-.is-index .entry.is-quote > .thumbs > div:first-child {background:{color:accent};}
-.content-wrapper,
-.is-index .entry:not(.is-photo):not(.is-quote) > .thumbs > div:first-child, .is-perma .info-container > div,
-.pagination {background:{color:post background};}
-.thumbs .quote-body:after {background-image:linear-gradient(rgba({RGBcolor:accent},0), rgba({RGBcolor:accent},1));}
-.is-text .thumbs > div:first-child:after, .thumbs .question:after, .is-chat .thumb-content:after, .is-audio .thumb-content:after, .is-link .thumb-content:after {background-image:linear-gradient(rgba({RGBcolor:post background},0), rgba({RGBcolor:post background},1));}
-
-.content .sender span {border-top:1px {color:accent} solid;}
-.content .chat-line .chat-label, .content .rbc-author {border-bottom:1px rgba(0,0,0,.05) solid;}
-.content .chat-label span {border-bottom:1px {color:accent} solid;}
-.photoset-grid {grid-gap:{text:photoset gutter}px;}
-.content .acc-player {background:{color:accent};}
-.content .message .sender {border-top:1px rgba(0,0,0,.05) solid;}
-.content .rbc-author span {border-bottom:1px rgba(0,0,0,.5) solid;}
-
-.thumbs .acc-player {background:rgba({RGBcolor:accent text},.1);}
-
-.is-index .ic-date + .ic-entry-tag {border-top:1px rgba(0,0,0,.1) solid;}
-
-
-
-/* thumbs */
-
-.photo-actions a:hover, .entry.has-video-thumbnail .thumb-actions a:hover {color:{color:accent}!important;}
-
-
-/* text formatting */
-
-hr {background:{color:accent}; box-shadow:-15px 0 0 {color:accent}, 15px 0 0 {color:accent};}
-blockquote {border-left:1px {color:accent} solid;}
-.text-body blockquote, .is-text .rb-content blockquote {background:rgba({RGBcolor:accent},.2); border-left:4px {color:accent} solid;}
-pre, code {background:rgba({RGBcolor:accent},.2);}
-ul li:before {background:{color:accent};}
-
-
-/* lightbox */
-
-.tmblr-lightbox {background-color:rgba({RGBcolor:accent},.9)!important;}
-.lightbox-image-container {background:{color:background}; border:1px rgba({RGBcolor:accent text},.2) solid;}
-
-
-/* controls */
-
-.controls {background:rgba({RGBcolor:accent},.8);}
-
-
-@media (min-width:0px) and (max-width:1100px) {
-    
-    #mobile + label hr, #mobile:checked + label {background:{color:accent};}
-    #mobile + label {background:{color:post background}; border:1px rgba(0,0,0,.1) solid}
-    #mobile:checked + label hr {background:{color:accent text};}
-    
-    .thumb-actions a, .photo-actions a, .thumb-actions a:hover, .photo-actions a:hover {background:rgba({RGBcolor:accent},.5); color:{color:accent text};}
+.tmblr-iframe--app-cta-button {
+display: none!important;
+}
+ 
+::-webkit-scrollbar-thumb:vertical {
+background: #eeccdd;
+}
+ 
+::-webkit-scrollbar {
+width: 3px;
 }
 
-@media (min-width:1101px){
-    .is-index.brick .entry.is-photo .entry-date, .is-index.brick .entry.is-photo .entry-date a, .is-index.brick .entry.has-video-thumbnail .entry-date, .is-index.brick .entry.has-video-thumbnail .entry-date a, .entry.has-video-thumbnail .thumbs .accd-label, .entry.has-video-thumbnail .thumb-actions, .entry.has-video-thumbnail .thumb-actions a {color:{color:overlay text}; background-image:none!important;}
-    
-    .is-index .icd-number {border-left:1px rgba(0,0,0,.1) solid;}
-	.photo-overlay, .is-video.has-video-thumbnail .video-container:before {background:rgba(0,0,0,.8);}
-    .photo-overlay:after {background:{color:accent};}
-	.notes li:not(:last-child):after {background:rgba(0,0,0,.1);}
+body {
+background: #ffffff;
+background-attachment: fixed;
+background-image: url('https://i.imgur.com/OwFNaXO.png');
+background-repeat: repeat;
+color: #555555;
+cursor: url(https://i.imgur.com/lhPqll6.png), progress;
+font-family: 'Karla', sans-serif;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+letter-spacing: 1px;
+margin: 0;
+text-align: justify;
+text-transform: none;
+word-break: break-word;
 }
 
+b {
+font-weight: 700;
+}
+
+a {
+color: #000000;
+text-decoration:  none;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+}
+ 
+a:hover {
+color: #cfcfcf;
+}
+ 
+h1 {
+font-weight: 700;
+line-height: 100%;
+text-align: left;
+}
+
+.h1-border {
+background: #eeccdd;
+height: 3px;
+margin-bottom: 28px;
+width: 30px;
+}
+ 
+blockquote {
+border-left: 1px solid #eeeeee;
+margin: 5px;
+padding-left: 5px;
+}
+ 
+blockquote img {
+height: auto;
+max-width: 300px;
+}
+ 
+blockquote blockquote {
+border-left: 1px solid #eeeeee;
+padding-left: 5px;
+}
+
+#links {
+background: #000000;
+border-bottom: 3px solid #eeccdd;
+font-size: 0.9rem;
+padding-bottom: 13px;
+padding-top: 13px;
+position: fixed;
+text-align: left;
+text-transform: uppercase;
+top: 0px;
+width: 100%;
+z-index: 1;
+}
+ 
+.title {
+background: #ffffff;
+border-radius: 100px;
+color: #000000;
+display: inline-block;
+margin-left: 10px;
+margin-right: 20px;
+padding-right: 10px;
+text-align: center;
+}
+
+.ln-wrapper {
+display: inline-block;
+}
+
+.navigation {
+display: inline-block;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+}
+ 
+.navigation-title {
+background: none;
+color: #ffffff;
+border: none;
+display: inline-block;
+font-family: 'Karla', sans-serif;
+font-size: 0.9rem;
+margin-right: 10px;
+padding: 0px;
+text-align: center;
+text-transform: uppercase;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+}
+ 
+.navigation:hover .navigation-content {
+display: block;
+}
+ 
+.navigation:hover .navigation-title {
+color: #cfcfcf;
+}
+ 
+.navigation-content {
+display: none;
+position: absolute;
+text-align: left;
+width: 170px;
+z-index: 1;
+}
+ 
+.navigation-content a {
+background: #ffffff;
+color: #000000!important;
+display: block;
+padding: 10px;
+width: 150px;
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+}
+ 
+.navigation-content a:hover {
+color: #cfcfcf!important;
+}
+
+#links a {
+color: #ffffff;
+margin-right: 10px;
+}
+
+#links a:hover {
+color: #cfcfcf;
+}
+
+#panels-wrapper {
+float: left;
+margin-top: 61px;
+width: 100%;
+}
+
+#panel {
+background: rgb(255, 255, 255, 0.7);
+border-bottom: 1px solid #eeeeee;
+float: left;
+height: auto;
+top: 0px;
+width: 100%;
+}
+
+.panel-container {
+margin-bottom: 100px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
+width: 790px;
+}
+
+.panel-title {
+font-size: 0.9rem;
+font-weight: 700;
+text-align: left;
+text-transform: uppercase;
+}
+
+.panel-border {
+background: #eeccdd;
+height: 3px;
+margin-bottom: 18px;
+margin-top: 18px;
+width: 30px;
+}
+
+.panel-content {
+text-transform: none;
+}
+
+.image {
+height: 350px;
+width: 350px;
+}
+
+.image img {
+height: 350px;
+width: 350px;
+}
+
+.intro {
+background: #ffffff;
+border-left: 3px solid #eeccdd;
+height: 280px;
+margin-left: 350px;
+margin-top: -350px;
+padding: 35px;
+width: 367px;
+}
+
+.projects {
+margin: -10px;
+overflow: hidden;
+width: 840px;
+}
+ 
+.projects-wrapper {
+float: left;
+height: 250px;
+margin: 10px;
+width: 250px;
+}
+ 
+.projects-image img {
+border: 1px solid #eeccdd;
+height: 248px;
+position: absolute;
+width: 248px;
+}
+ 
+.projects-name {
+font-size: 0.9rem;
+position: absolute;
+text-transform: uppercase;
+}
+ 
+.projects-name a {
+background: #eeccdd;
+border: 1px solid #eeccdd;
+color: #ffffff;
+display: inline-block;
+padding: 10px;
+}
+ 
+.projects-name a:hover {
+background: #ffffff;
+color: #eeccdd;
+}
+
+.commission-wrapper {
+margin: -10px;
+overflow: hidden;
+padding-bottom: 22px;
+width: 840px;
+}
+
+.commission-status {
+border-bottom: 1px solid #eeeeee;
+float: left;
+margin: 10px;
+padding-bottom: 10px;
+text-transform: none;
+width: 385px;
+}
+
+.more-links {
+font-size: 0.9em;
+text-align: left;
+text-transform: uppercase;
+}
+ 
+.more-links a {
+display: inline-block;
+margin-right: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+body {
+background-image: none;
+}
+
+.panel-container {
+width: 470px;
+}
+
+.image {
+height: 470px;
+width: 470px;
+}
+
+.image img {
+height: 470px;
+width: 470px;
+}
+
+.intro {
+background: #f8f8f8;
+height: auto;
+margin-left: 0px;
+margin-top: 0px;
+width: 397px;
+}
+
+.projects {
+margin: 0px;
+width: 470px;
+}
+
+.projects-wrapper {
+height: 470px;
+margin: 0px;
+margin-bottom: 10px;
+width: 470px;
+}
+
+.projects-image img {
+height: 468px;
+width: 468px;
+}
+
+.commission-wrapper {
+margin: 0px;
+width: 470px;
+}
+
+.commission-status {
+margin: 0px;
+margin-bottom: 10px;
+width: 470px;
+}
+
+}
+
+@media only screen and (max-width: 500px) {
+    
+.ln-wrapper {
+margin-left: 10px;
+margin-top: 10px;
+}
+
+#panels-wrapper {
+margin-top: 88px;
+}
+
+.panel-container {
+width: 320px;
+}
+
+.image {
+height: 320px;
+width: 320px;
+}
+
+.image img {
+height: 320px;
+width: 320px;
+}
+
+.intro {
+height: auto;
+margin-left: 0px;
+margin-top: 0px;
+width: 247px;
+}
+
+.projects {
+margin: 0px;
+width: 320px;
+}
+
+.projects-wrapper {
+height: 320px;
+margin: 0px;
+margin-bottom: 10px;
+width: 320px;
+}
+
+.projects-image img {
+height: 318px;
+width: 318px;
+}
+
+.commission-wrapper {
+margin: 0px;
+width: 320px;
+}
+
+.commission-status {
+margin: 0px;
+margin-bottom: 10px;
+width: 320px;
+}
+
+}
+
+{CustomCSS}
+    
 </style>
-<noscript><style>body {opacity:1;}</style></noscript>
+    
 </head>
+
 <body>
-<section class="controls">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-</section>
-<input type="checkbox" id="mobile" />
-<label for="mobile"><hr /><hr /><hr /></label>
-<header class="cap">
-    <a href="/">{BlogTitle}<span class="lo">@{Name}</span></a>
-</header>
-<aside>
-    <div class="blog-title">
-        <div class="bt-img"><img src="{PortraitURL-128}" /></div>
-        <div class="bt-text cap bold"><a href="/">{BlogTitle}<br/><span class="neut lo it">@{Name}</span></a></div>
-    </div>
-    {block:Description}
-    <div class="blog-description">{Description}</div>
-    {/block:Description}
-    <nav>
-        <span class="bold">{lang:Navigate}</span>
-        <a href="/">{lang:Home}</a> 
-        {block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
-        <a href="/archive">{lang:Archive}</a>
-        {block:ifLink1}<a href="{text:link 1 url}">{text:link 1}</a>{/block:ifLink1}
-        {block:ifLink2}<a href="{text:link 2 url}">{text:link 2}</a>{/block:ifLink2}
-        {block:ifLink3}<a href="{text:link 3 url}">{text:link 3}</a>{/block:ifLink3}
-    </nav>
-    {block:HasPages}
-    <nav class="blog-pages">
-        <span class="bold">{lang:Pages}</span>
-        {block:Pages}<a href="{URL}">{Label}</a>{/block:Pages}
-    </nav>
-    {/block:HasPages}
-    {block:ifEnableSearchForm}
-    <div class="blog-search">
-        <span class="bold">{lang:Search}</span>
-        <form action="/search" method="get">
-            <input class="it" type="text" name="q" value="{SearchQuery}" placeholder="{lang:Search}..." />
-            <input type="submit" />
-        </form>
-    </div>
-    {/block:ifEnableSearchForm}
-</aside>
-<main class="{block:IndexPage}is-index{/block:IndexPage}{block:PermalinkPage}is-perma{/block:PermalinkPage} {select:layout} pw{select:text post width}">
-    <section class="holder">
-        {block:Posts}
-        <article class="entry is-{PostType}{block:Video}{block:VideoThumbnail} has-video-thumbnail{/block:VideoThumbnail}{/block:Video}"{block:Audio} data-color="{color:accent}" data-text="{color:accent text}"{/block:Audio}{block:Text} data-color="{color:accent}" data-text="{color:accent text}"{/block:Text}>
-            <section class="thumbs">
-            {block:Photo}
-            <div class="photo-container">
-            <div class="img-container" style="background:url('{PhotoURL-HighRes}') center center no-repeat; background-size:cover;"></div>
-            <div class="photo-overlay">
-                <div class="photo-actions">
-                    <a class="like-btn" href="javascript:;">
-                    {LikeButton}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-meh initial"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff475d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile done"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    </a>
-                    <a class="rb-btn" href="{ReblogURL}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></a>
-                    <a class="view-btn" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
-                </div>
-            </div>
-            </div>
-            {/block:Photo}
-            {block:Video}
-            <div class="video-container"{block:VideoThumbnail} style="background:url('{VideoThumbnailURL}') center center no-repeat; background-size:cover;"{/block:VideoThumbnail}>
-                <div class="accd-label cap">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-film"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg> {Lang:Video}
-                </div>
-                <div class="thumb-actions">
-                    <a class="like-btn" href="javascript:;">
-                    {LikeButton}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-meh initial"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff475d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile done"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    </a>
-                    <a class="rb-btn" href="{ReblogURL}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></a>
-                    <a class="view-btn" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
-                </div>
-            </div>
-            {/block:Video}
-            {block:Photoset}
-            <div class="photoset-container">
-            {block:Photos}
-            <div class="photo-container" style="background:url('{PhotoURL-HighRes}') center center no-repeat; background-size:cover;"></div>
-            {/block:Photos}
-            <div class="photo-overlay">
-                <div class="photo-actions">
-                    <a class="like-btn" href="javascript:;">
-                    {LikeButton}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-meh initial"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff475d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile done"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    </a>
-                    <a class="rb-btn" href="{ReblogURL}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></a>
-                    <a class="view-btn" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
-                </div>
-            </div>
-            </div>
-            {/block:Photoset}
-            {block:Date}
-            <div class="thumb-actions">
-                <a class="like-btn" href="javascript:;">
-                    {LikeButton}
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-meh initial"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff475d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile done"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                </a>
-                <a class="rb-btn" href="{ReblogURL}" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></a>
-                <a class="view-btn" href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></a>
-            </div>
-            <div class="entry-date">
-                <div class="part">
-                    <a class="bold" href="{Permalink}">{DayofMonthwithZero}.{MonthNumberwithZero}.{ShortYear}</a>
-                </div>
-                <div class="part">
-                    <span class="notes">{FormattedNoteCount}</span>
-                </div>
-            </div>
-            {/block:Date}
-            </section>
-            <section class="content">
-            <div class="content-wrapper">
-                {block:Photo}
-                <div class="photo-container"><div class="photoset-grid"><div class="photo" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div></div></div>
-                {/block:Photo}
-                {block:Photoset}
-                <div class="photo-container photoset"><div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div></div>
-                {/block:Photoset}
-                {block:Quote}
-                <div class="quote-container">
-                    <div class="quote-body {Length}">{Quote}</div>
-                    {block:Source}<div class="quote-source">{Source}</div>{/block:Source}
-                </div>
-                {/block:Quote}
-                {block:Text}
-                <div class="text-container">
-                    {block:Title}<h1 class="entry-title">{Title}</h1>{/block:Title}
-                    {block:NotReblog}
-                    <div class="text-body">{Body}</div>
-                    {/block:NotReblog}
-                    {block:RebloggedFrom}
-                    <div class="reblog-chain">
-                        {block:Reblogs}
-                        <div class="rb-content">
-                            <div class="rbc-author">
-                                {block:isActive}<a href="{Permalink}">{Username}</a>{/block:isActive}
-                                {block:isDeactivated}<span>{Username}</span>{/block:isDeactivated}
-                            </div>
-                            {Body}
-                        </div>
-                        {/block:Reblogs}
-                    </div>
-                    {/block:RebloggedFrom}
-                </div>
-                {/block:Text}
-                {block:Answer}
-                <div class="message">
-                    <div class="question">{Question}</div>
-                    <div class="sender lo"><span>{lang:Asked by Asker}</span></div>
-                    {block:NotReblog}
-                    <div class="answer">
-                        {Answer}
-                    </div>
-                    {/block:NotReblog}
-                    {block:RebloggedFrom}
-                    {block:Answerer}
-                    <div class="answer">{Answer}</div>
-                    <div class="sender lo"><span>{Answerer}</span></div>
-                    {/block:Answerer}
-                    <div class="reblog-chain">
-                        {block:Reblogs}
-                        <div class="rb-content">
-                            <div class="rbc-author">
-                                {block:isActive}<a href="{Permalink}">{Username}</a>{/block:isActive}
-                                {block:isDeactivated}<span>{Username}</span>{/block:isDeactivated}
-                            </div>
-                            {Replies}
-                        </div>
-                        {/block:Reblogs}
-                    </div>
-                    {/block:RebloggedFrom}
-                </div>
-                {/block:Answer}
-                {block:Chat}
-                <div class="chat-container">
-                    {block:Title}<h1 class="entry-title">{Title}</h1>{/block:Title}
-                    {block:Lines}
-                    <div class="chat-line">
-                        {block:Label}
-                        <div class="chat-label it"><span>{Label}</span></div>
-                        {Line}
-                        {/block:Label}
-                    </div>
-                    {/block:Lines}
-                </div>
-                {/block:Chat}
-                {block:Audio}
-                <div class="audio-container" data-color="{color:accent}" data-text="{color:accent text}">
-                    {block:AudioPlayer}<div class="ac-classic">
-                        <div class="acc-data">
-                            {block:Artist}<div class="it has-ellipsis artist">{Artist}</div>{/block:Artist}
-                            {block:TrackName}<div class="has-ellipsis track-name">{TrackName}</div>{/block:TrackName}
-                            {block:Album}<div class="has-ellipsis album">{Album}</div>{/block:Album}
-                        </div>
-                        <div class="acc-player">{AudioPlayer}</div>
-                    </div>{/block:AudioPlayer}
-                    {block:AudioEmbed}<div class="ac-embed">
-                        <div class="acc-data">
-                            <div class="accd-label cap"></div>
-                            {block:Artist}<div class="it has-ellipsis artist">{Artist}</div>{/block:Artist}
-                            {block:TrackName}<div class="has-ellipsis track-name">{TrackName}</div>{/block:TrackName}
-                            {block:Album}<div class="has-ellipsis album">{Album}</div>{/block:Album}
-                        </div>
-                        <div class="ace-player">{AudioEmbed}</div>
-                    </div>{/block:AudioEmbed}
-                </div>
-                {/block:Audio}
-                {block:Link}
-                <div class="link-container">
-                    <a class="link" href="{URL}">
-                        <h1>{Name}</h1>
-                        <div class="link-data cap">
-                            {block:Author}<span class="author">{Author}</span>{/block:Author}
-                            <span class="divider"></span>
-                            {block:Host}<span class="host">{Host}</span>{/block:Host}
-                        </div>
-                        {block:Excerpt}
-                        <div class="link-excerpt">{Excerpt}</div>
-                        {/block:Excerpt}
-                    </a>
-                    {block:NotReblog}
-                    <div class="link-description">{Description}</div>
-                    {/block:NotReblog}
-                    {block:RebloggedFrom}
-                    <div class="reblog-chain">
-                        {block:Reblogs}
-                        <div class="rb-content">
-                            <div class="rbc-author">
-                                {block:isActive}<a href="{Permalink}">{Username}</a>{/block:isActive}
-                                {block:isDeactivated}<span>{Username}</span>{/block:isDeactivated}
-                            </div>
-                            {Body}
-                        </div>
-                        {/block:Reblogs}
-                    </div>
-                    {/block:RebloggedFrom}
-                </div>
-                {/block:Link}
-                {block:Video}
-                <div class="video-container">
-                    {Video-500}
-                </div>
-                {/block:Video}
-                {block:Date}
-                <div class="info-container">
-                    <div class="ic-date">
-                        <div class="icd-day">{block:IndexPage}{ShortDayofWeek}.{/block:IndexPage}{block:PermalinkPage}{DayofWeek}{/block:PermalinkPage}</div>
-                        <div class="icd-number">
-                            <div class="month{block:IndexPage} cap{/block:IndexPage}">{block:IndexPage}{ShortMonth}{/block:IndexPage}{block:PermalinkPage}{Month}{/block:PermalinkPage}</div>
-                            <div class="day-year"><div>{DayofMonthwithZero}</div><div>{Year}</div></div>
-                            <div class="time">{24HourWithZero}:{Minutes}</div>
-                        </div>
-                    </div>
-                    {block:Caption}
-                    <div class="ic-entry-caption {select:post captions}">
-                        {block:NotReblog}
-                        <div class="rb-content">
-                        <div class="rbc-author"><a href="{Permalink}">{Name}</a></div>
-                        {Caption}
-                        </div>
-                        {/block:NotReblog}
-                        {block:RebloggedFrom}
-                        <div class="reblog-chain">
-                        {block:Reblogs}
-                            <div class="rb-content">
-                                <div class="rbc-author">
-                                    {block:IsActive}<a href="{Permalink}">{Username}</a>{/block:isActive}{block:IsDeactivated}<span>{Username}</span>{/block:isDeactivated}
-                                </div>
-                                {Body}
-                            </div>
-                        {/block:Reblogs}
-                        </div>
-                        {/block:RebloggedFrom}
-                    </div>
-                    {/block:Caption}
-                    {block:HasTags}
-                    <div class="ic-entry-tag {select:post tags}">
-                        {block:Tags}
-                        <a href="{TagURL}">{Tag}</a>&nbsp;&nbsp; 
-                        {/block:Tags}
-                    </div>
-                    {/block:HasTags}
-                    <div class="ic-entry-source lo">
-                        <span class="note">{NoteCountwithLabel}</span>
-                        {block:RebloggedFrom}
-                        <span class="source">{lang:Via} <a href="{ReblogParentURL}">{ReblogParentName}</a></span>
-                        <span class="divider"></span>
-                        <span class="source">
-                        {lang:Source} <a href="{ReblogRootURL}">{ReblogRootName}</a>
-                        </span>
-                        {/block:RebloggedFrom}
-                    </div>
-                    {block:PostNotes}
-                    <div class="ic-entry-notes cap">
-                        <div class="note-wrapper">{PostNotes}</div>
-                    </div>
-                    {/block:PostNOtes}
-                </div>
-                {/block:Date}
-                {block:IndexPage}
-                <div class="entry-nav-container">
-                    <a href="{Permalink}">{lang:Permalink}</a>
-                    <a href="#" class="close-this">{lang:Close}</a>
-                </div>
-                {/block:IndexPage}
-            </div>
-            </section>
-        </article>
-        {/block:Posts}
-    </section>
-</main>
-<footer class="pagination">
-    {block:PermalinkPagination}
-    <div class="current-page">
-        {block:Posts}
-        {block:ContentSource}
-        <span class="content-source lo">{lang:Source}: <a href="{SourceURL}">{SourceTitle}</a></span>
-        {/block:ContentSource}
-        {/block:Posts}
-    </div>
-    {block:PreviousPost}<a class="previous-page lo" href="{PreviousPost}">{lang:Older}</a>{/block:PreviousPost}
-    {block:NextPost}<a class="next-page lo" href="{NextPost}">{lang:Newer}</a>{/block:NextPost}
-    {/block:PermalinkPagination}
-        
-    {block:Pagination}
-    <div class="current-page">{lang:Page CurrentPage of TotalPages}</div>
-    {block:PreviousPage}<a class="previous-page lo" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
-    {block:NextPage}<a class="next-page lo" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
-    {/block:Pagination}
-</footer>
-<script src="https://static.tumblr.com/0podkko/jfMplm3f8/modified_photosets.js"></script>
-<script src="https://dl.dropbox.com/s/vdaqh3lz1uz71v4/sima-scripts.js"></script>
+
+<div id="links">
+<div class="title"><i class="far fa-heart"style="background: #eeccdd;border-radius: 100px;color: #ffffff;font-size: 0.8rem;margin-right: 10px;padding: 10px;width: 0.8rem;margin-left: -1px;margin-right: 10px;padding: 10px;width: 0.8rem;"></i>My Portfolio</div>
+<div class="ln-wrapper">
+<a href="/">Home</a>
+<div class="navigation">
+<button class="navigation-title">Navigation</button>
+<div class="navigation-content">
+<a href="/">Link One</a>
+<a href="/">Link Two</a>
+<a href="/">Link Three</a>
+<a href="/">Link Four</a>
+<a href="/">Link Five</a>
+</div>
+</div>
+<a href="/">Archive</a>
+</div>
+</div>
+
+<div id="panels-wrapper">
+
+<!-- Start of About Panel -->
+
+<div id="panel">
+
+<div class="panel-container">
+
+<div class="image"><img src="https://i.imgur.com/ztbook3.png"/></div>
+
+<div class="intro">
+
+<div class="panel-title">About Me</div>
+
+<div class="panel-border"></div>
+
+<div class="panel-content">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- End of About Panel -->
+
+<!-- Start of Gallery Panel -->
+
+<div id="panel">
+
+<div class="panel-container">
+
+<div class="panel-title">Sample Works</div>
+
+<div class="panel-border"></div>
+
+<div class="panel-content" style="margin-bottom: 22px;">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.
+</div>
+
+<div class="projects">
+
+<!-- Start of Project -->
+
+<div class="projects-wrapper">
+ 
+<div class="projects-image">
+<img src="https://i.imgur.com/T5zo6XN.png"/>
+<div class="projects-name">
+<a href="/">Lorem Ipsum</a>
+</div>
+</div>
+ 
+</div>
+
+<!-- End of Project -->
+
+<!-- Start of Project -->
+
+<div class="projects-wrapper">
+ 
+<div class="projects-image">
+<img src="https://i.imgur.com/NiSa2gt.png"/>
+<div class="projects-name">
+<a href="/">Lorem Ipsum</a>
+</div>
+</div>
+ 
+</div>
+
+<!-- End of Project -->
+
+<!-- Start of Project -->
+
+<div class="projects-wrapper">
+ 
+<div class="projects-image">
+<img src="https://i.imgur.com/v8lmIf6.png"/>
+<div class="projects-name">
+<a href="/">Lorem Ipsum</a>
+</div>
+</div>
+ 
+</div>
+
+<!-- End of Project -->
+
+</div>
+
+</div>
+
+</div>
+
+<!-- End of Gallery Panel -->
+
+<!-- Start of Contact Panel -->
+
+<div id="panel">
+
+<div class="panel-container">
+
+<div class="panel-title">Commission</div>
+
+<div class="panel-border"></div>
+
+<div class="commission-wrapper">
+
+<div class="commission-status"><i class="far fa-check-circle" style="color: #eeccdd;margin-right: 10px;"></i> Accepting Commissions</div>
+ 
+<div class="commission-status"><i class="far fa-times-circle" style="margin-right: 10px;"></i> Not Accepting Commissions</div>
+
+</div>
+
+<div class="panel-content">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, auctor at, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.
+</div>
+
+<p><iframe frameborder="0" height="200" id="ask_form" scrolling="no" src="https://www.tumblr.com/ask_form/{Name}.tumblr.com" width="100%"></iframe></p>
+
+</div>
+
+</div>
+
+<!-- End of Contact Panel -->
+
+<!-- Start of Photography Panel -->
+
+<div id="panel">
+
+<div class="panel-container">
+
+<div class="panel-title">Photography</div>
+
+<div class="panel-border"></div>
+
+<div class="projects">
+
+<!-- Start of Photography -->
+
+<div class="projects-wrapper">
+ 
+<div class="projects-image">
+<img src="https://i.imgur.com/CdTTvOd.png"/>
+</div>
+ 
+</div>
+
+<!-- End of Photography -->
+
+<!-- Start of Photography -->
+
+<div class="projects-wrapper">
+ 
+<div class="projects-image">
+<img src="https://i.imgur.com/XjV6Osb.png"/>
+</div>
+ 
+</div>
+
+<!-- End of Photography -->
+
+<!-- Start of Photography -->
+
+<div class="projects-wrapper">
+ 
+<div class="projects-image">
+<img src="https://i.imgur.com/i1Bf2ry.png"/>
+</div>
+ 
+</div>
+
+<!-- End of Photography -->
+
+<!-- Start of Photography -->
+
+<div class="projects-wrapper">
+ 
+<div class="projects-image">
+<img src="https://i.imgur.com/dsPfcZF.png"/>
+</div>
+ 
+</div>
+
+<!-- End of Photography -->
+
+</div>
+
+</div>
+
+</div>
+
+<!-- End of Photography Panel -->
+
+<!-- Start of Explore Panel -->
+
+<div id="panel">
+
+<div class="panel-container">
+
+<div class="panel-title">Elsewhere</div>
+
+<div class="panel-border"></div>
+
+<div class="more-links">
+<a href="/">Link One</a>
+<a href="/">Link Two</a>
+<a href="/">Link Three</a>
+<a href="/">Link Four</a>
+<a href="/">Link Five</a>
+<a href="https://extasisthemes.tumblr.com">Theme</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- End of Elsewhere Panel -->
+
+</div>
+
 </body>
+
 </html>
