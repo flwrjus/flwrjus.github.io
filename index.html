@@ -1,212 +1,369 @@
-<!DOCTYPE html>
-<head>
- 
- <!-- THEME BY @LEEJORDAN / @VENUSTHMS
-                           do not remove the credit
-                           
--------------------------------------------------------------------------
- 
-  - terms of use: venusthms.tumblr.com/terms
- 
-  - message me if you got any problems or questions about the code
- 
-  - you'll find instructions about customization through out the code
-
-  - the grid/filter effect was created with the tutorial by @cyantists
-
-  - art credit goes to @polydeuce
+<!--
+      
+// [nojschallenge]
    
----------------------------------------------------------------------->
+    Cafe
  
-<title>members</title><link rel="shortcut icon" href="{Favicon}"> <!-- change (tab) title here -->
- 
-<!---- SCRIPT - DO NOT TOUCH ---->
-
-<link href="https://fonts.googleapis.com/css?family=Arapey|Karla|Lora|PT+Serif|Playfair+Display|Quicksand|Poppins" rel="stylesheet"><link rel="stylesheet" type="text/css" href="//dl.dropbox.com/s/tki2ibhra46cxb0/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script><script src="//dl.dropbox.com/s/vcmmn9fpowr87vf/filter.js"></script>
-<script src="https://static.tumblr.com/xd6ujov/9Rpouml9f/imagesloaded.pkgd.min.js"></script><script src="//dl.dropbox.com/s/x3z7b0uozqttpv0/masonry.js"></script>
-
-<link href="https://static.tumblr.com/4gatuv1/X8Poxwvz8/style-my-tooltips.css" rel="stylesheet" type="text/css" />
-<script src="https://static.tumblr.com/4gatuv1/Aneoxwvz8/jquery.style-my-tooltips.js"></script>
-<script>
-!function(t){t(document).ready(function(){t("a[title]").style_my_tooltips({tip_follows_cursor:!0,tip_delay_time:200,tip_fade_speed:300})})}(jQuery);
-</script>
- 
- 
-<style type="text/css">
- 
-/* tooltips */
- 
-#s-m-t-tooltip {
-  max-width: 250px;
-  margin:24px 14px 7px 12px;
-  padding:5px 8px;
-  background: #fff;
-  border-radius:2px;
-  font-family: 'karla';
-  letter-spacing: 1px;
-  font-size:10px;
-  color:#000;
-  box-shadow: none;
-}
- 
-/* scrollbar */
- 
-::-webkit-scrollbar {
-   width:10px;
-   height:17px;
-   background-color: #6B699D;
-}
-::-webkit-scrollbar-track {
-   background-color: #fff;
-}
-::-webkit-scrollbar-thumb {
-   background-color: #6B699D;
-   min-height:24px;
-   min-width:24px;
-}
-
-/* selection */
- 
-::-moz-selection { background:#eee;color:#000; }
-::selection { background:#eee;color:#000; }
-
-/* general */
-
-body {
-background: #FFFFFF; /* page background */
-font-family: 'poppins'; /* font */
-cursor: default;
-overflow-x:hidden;
-}
-
-/* accent color */
-
-h1, .button:hover,.button.selected, .content a {
-    background: rgba(107, 105, 157, 50);
-}
-
-a:hover, .item a:hover {
-    color: #6B699D; /* links hover colour */
-}
-
-/* header */
-
-.header {
-    background: inherit;
-}
-
-h1 { /* title */
-    font-family: 'poppins';
-    font-size: 20px;
-    letter-spacing: 3px;
-    color: #FFF;
-}
-
-.links, .filters { /* other text */
-    font-size: 15px;
-}
-
-.desc { /* desc */
-    font-size: 10px;
-}
-
-/* members */
-
-.item {
-    color: #444; /* text color*/
-}
-
-.item a {
-    color: #444; /* text color*/
-}
-
-
-h2 { /*title*/
-    font-size: 13px;
-    text-align: left;
-}
-
-.content { /*description*/
-    font-size: 12px;
-    text-align: left;
-}
-
-.content a:hover { /* link hover background*/
-    background: none;
-}
- 
-</style>
-</head>
- 
-<body>
-
-<!--- header ---->
-<div class="header">
-<div class="headercontent">
-    <h1>SP</h1> <!--- here goes your title ---->
-    <div class="links">
-        <a href="/">about</a>
-        <a href="/ask">contact</a>
-        <a href="/">blog</a>
-        <a href="/">click!</a>
-        <!--- copy & paste as needed ---->
-    </div>
+by egg.design //
+    
+    by using viewing or using this code, you are agreeing to these terms:
+    
+    + do not remove credit, claim as your own, or redistribute
+    
+    + edit as much as you want without touching the credit
+    
+** Please read **
   
-<!--- if you don't want filters: delte from here ---->
-    <div class="filters">
-      <div class="button selected" filter="item">all works</div>
-      <div class="button" filter="filter1">series</div>
-      <div class="button" filter="filter2">posters</div>
-      <div class="button" filter="filter3">videos</div>
-      <!--- copy & paste as needed ---->
-</div>
-<!--- until here ---->
+This theme was made during the no js challenge, except for fun I added to the challenge by using only inline css. This means that customziation options are very limited, so please keep that in mind while using the theme.
+  
+** Thank you! **
+-->
+<!DOCTYPE html>
+<html>
+<head>
+     
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>{Title}</title>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <meta name="image:background" content="" />
+    
+    <meta name="color:background" content="#fff" />
+    <meta name="color:header" content="#fff" />
+    <meta name="color:header links" content="#222" />
+    <meta name="color:links" content="#222" />
+    <meta name="color:username underline" content="#fad" />
+    <meta name="color:tag underline" content="#fad" />
+    <meta name="color:border" content="#eee" />
+    <meta name="color:footer" content="#f2f2f2" />
+    <meta name="color:current page" content="#fad" />
+    <meta name="color:jump page" content="#222" />
+    <meta name="color:pagination" content="#fad" />
+    
+    <meta name="text:url one" content="http://" />
+    <meta name="text:link one" content="un" />
+    <meta name="text:url two" content="http://" />
+    <meta name="text:link two" content="deux" />
+    <meta name="text:url three" content="http://" />
+    <meta name="text:link three" content="trois" />
+    <meta name="text:url four" content="http://" />
+    <meta name="text:link four" content="quatre" />
+    <meta name="text:tag symbol" content="#" />
+    <meta name="text:asked" content="asked" />
+    
+    <meta name="if:full background" content="" />
+    <meta name="if:one column" content="" />
+</head>
 
-    <p class="desc">hello! i am a communication designer in making and this is a collection of my works.</p>
-    </div></div>
-    
-    
-<!--- members section starts 
-- replace filter1/filter2/etc (after 'item') with the filter names you set above(<div class="button" filter="THISISYOURFILTERNAME">filter one</div>)
-- IMPORTANT: do not delete 'item' !
 
-layout: 
+<!--
 
-<div class="item here goes your filters">
-    <img src="IMAGEURL"></img>
-    <h2>Title</h2>
-    <p class="content">description <a href="/link">blogtitle/name</a></p>
-    </div>
-    
----->
-<div class="grid">
-    
-    
-    <div class="item filter1">
-    <img src="https://66.media.tumblr.com/f77664e09f38e642a2bb3dd9bd7f8820/ad9b42a599927aad-61/s400x600/c213a77f74e3032a203a944852fe023bd5854a00.png"></img>
-    <h2>pun-tended! series</h2>
-    <p class="content">this is a series of work where i play with words and food. <a href="/series1">more info +</a></p>
-    </div>
-    
-   <div class="item filter2">
-    <img src="https://66.media.tumblr.com/8b138ba99314efd2421fce001a44e69a/ad9b42a599927aad-77/s1280x1920/27ca17afa7a36613884ed4b04f57b047b8d74596.jpg"></img>
-    <h2>title here</h2>
-    <p class="content">put some text here. <a href="blogurl">name</a></p>
-    </div>
-    
-       <div class="item filter2">
-    <img src="https://66.media.tumblr.com/8b138ba99314efd2421fce001a44e69a/ad9b42a599927aad-77/s1280x1920/27ca17afa7a36613884ed4b04f57b047b8d74596.jpg"></img>
-    <h2>title here</h2>
-    <p class="content">put some text here. <a href="blogurl">name</a></p>
-    </div>
-    
+Editing directory 
 
-    
-<!----- DO NOT EDIT AFTER THIS LINE ----> 
-</div>
-<div class="vt"><a href="https://venusthms.tumblr.com/" title="venusthms"><img src="https://i.imgur.com/PxFLRpM.png"></img></a></div>
+Since this theme does not have style tags, editing may be more difficult than typical themes. Please be careful editing, especially if you do not have any experience with HTML or CSS. 
+
+- If your theme becomes "broken" after attempting to editing and you are still on the customizing page, try ctrl/command and z to undo the changes until it goes back to the original. 
+- If you have already saved and exited, look for the theme recovery page so you can revert to a previous version. 
+- If none of these work, re-install the theme
+
+If you wish to add custom CSS, you will need to add style tags somewhere in the theme.
+
+Here is the order of theme elements in the HTML:
+
+01. Container    - post and header container
+02. Header       - header links and icon
+03. Description  - blog description
+04. Posts        - Post types and styling
+05. Pagination   - pagination for posts
+06. Footer       - pagination and footer
+
+-->
+  
+    <body style="
+    font: normal 1em/160% Muli; 
+    margin:0px; background: {color:background} url({image:background}) {block:iffullbackground} no-repeat center center fixed{/block:iffullbackground}; background-attachment:fixed; 
+    {block:iffullbackground}background-size:cover;{/block:iffullbackground};
+    line-height:160%;
+"><div style="width:100%;padding:10px; position:fixed; top:0px; z-index:1; background:{color:header}"></div>
+
+<!-- container -->
+    <main style="width:90%; max-width:1000px; margin:100px auto; display:flex; flex-wrap:wrap;  justify-content:center; align-content:center;  align-items: flex-start; {block:ifonecolumn} display:block;{/block:ifonecolumn}
+">
+
+<!-- header -->
+  <header style="margin:14vh auto 10vh auto; width:100%; position: -webkit-sticky; position: sticky; top:0px; min-width:300px; padding:6px 0px; padding-bottom:14px; background:{color:header}; z-index:9999999!important;">
+    <div style=" left:0px; position:absolute; justify-content:flex-end; height:100%; display:flex; flex-wrap:wrap; align-items:center; width:calc(50% - 60px)"> <a href="/" style="margin:0 20px 0 0; text-decoration:none; color:{color:header links};">home</a> <a href="/ask" style="margin:0 20px 0 0; text-decoration:none; color:{color:header links};">ask</a>  <a style="margin:0 20px 0 0; text-decoration:none; color:{color:header links};" href="/submit">submit</a> <a href="/archive" style="margin:0 20px 0 0; text-decoration:none; color:{color:header links};">archive</a></div>
+     <div style=" position:absolute; justify-content:flex-start; right:0px; height:100%; display:flex; flex-wrap:wrap; align-items:center; width:calc(50% - 80px);"> <a href="{text:url one}" style="margin:0 20px 0 0; text-decoration:none; color:{color:header links};">{text:link one}</a> <a href="{text:url two}" style="margin:0 20px 0 0; text-decoration:none; color:{color:header links};">{text:link two}</a>  <a style="margin:0 20px 0 0; text-decoration:none; color:{color:header links};" href="{text:url three}">{text:link three}</a> <a href="{text:url four}" style="margin:0 20px 0 0; text-decoration:none; color:{color:header links};">{text:link four}</a></div>
+    <center>
+        <img src="{PortraitURL-128}" style="padding:10px; width:70px; border-radius:100%;"> 
+    </center>
+     </header>
+
+<!-- description -->    
+    <article style="width:60%; margin:-50px auto; padding:40px; border-top:1px solid {color:border};">
+        <center>{description}</center>
+    </article>
+
+<!-- posts -->       
+{block:Posts}<div class="posts" style="width:40%; max-width:600px; min-width:300px; height:60vh; overflow:hidden!important; margin:50vh 5% 0 5%;  border-radius:4px; {block:permalinkpage} height:auto!important; overflow:visible!important;{/block:permalinkpage} {block:Post1} margin-top:25vh; {/block:Post1} {block:Post2} margin-top:25vh; {/block:Post2} {block:ifonecolumn}width:70%;height:auto; margin:25vh auto;{/block:ifonecolumn}{block:permalinkpage}height:auto{/block:permalinkpage} {block:tagpage} height:auto{/block:tagpage} {block:searchpage}height:auto{/block:searchpage} {block:daypage}height:auto{/block:daypage}">
+
+{block:searchpage}<div style="margin:50px auto;">
+{lang:SearchResultCount results for SearchQuery}</div>
+{/block:searchpage}
  
-   
-</body>
+{block:NoSearchResults} <div style="margin:50px auto;">
+{lang:No posts containing SearchQuery}</div>
+{/block:NoSearchResults}
+ 
+{block:TagPage}<div style="margin:50px auto;">
+{lang:Showing TagResultCount posts tagged Tag}</div>
+{/block:TagPage}    
+
+<!-- date and notes -->
+{block:Date}
+<div style="padding:10px 0; display:flex; align-items:center;"> {block:rebloggedfrom} <img src="{ReblogRootPortraitURL-64}" style="margin:0px 10px 0 0; border-radius:100%; width:30px; height:30px; ">  {/block:rebloggedfrom}  {block:notreblog} <img src="{PortraitURL-64}" style="margin:0px 10px 0 0; border-radius:100%; width:30px; height:30px; ">  {/block:notreblog} <b><a style="text-decoration:none; color:{color:links}; "href="/day/{year}/{monthnumberwithzero}/{dayofmonthwithzero}">{TimeAgo}</a></b> {block:notecount}<span style="opacity:.72;"> &nbsp;	―  <a href="{Permalink}" style="text-decoration:none; color:{color:links};">  {NotecountWithLabel}</a>{/block:NoteCount} </span> </div>{/block:Date}
+
+<!-- {block:NoRebloggedFrom}
+{block:RebloggedFrom}{ReblogParentName}{/block:RebloggedFrom}
+{/block:NoRebloggedFrom} -->
+{block:ContentSource}
+<!-- {SourceURL}{block:SourceLogo}<img src="{BlackLogoURL}"
+width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />
+{/block:SourceLogo}
+{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} -->
+{/block:ContentSource}    
+  
+ <!-- text posts -->           
+{block:Text}
+            
+{block:Title}
+    <h2><a style="text-decoration:none; color:{color:links}; border-bottom:2px solid {color:username underline}"href="{Permalink}">{Title}</a></h2>
+{/block:Title}
+<div style="padding:20px; background:white; border-radius:4px"> {block:NotReblog}
+    <figcaption>
+        {Body}
+    </figcaption>
+{/block:NotReblog}
+ 
+{block:RebloggedFrom}
+<div class="reblog-list">
+    {block:Reblogs}
+        <div class="{block:isOriginalEntry}original-reblog{/block:isOriginalEntry}">
+            <div class="reblog-header">
+ 
+                {block:IsActive}
+                <a style="text-decoration:none; color:{color:links}; border-bottom:2px solid #beefed;"class="{block:isNotOriginalEntry}sub-reblog{/block:isNotOriginalEntry}" href="{Permalink}" target="_blank">
+                    <img src="{PortraitURL-64}" style="width:24px; float:left">
+                </a>
+                {/block:IsActive}
+ 
+                {block:IsDeactivated}
+                <span class="inactive {block:isNotOriginalEntry} sub-reblog{/block:isNotOriginalEntry}">
+                    <img src="{PortraitURL-64}" style="width:24px; float:left">
+                </span>
+                {/block:IsDeactivated}
+ 
+                {block:IsActive}
+                   <a style="text-decoration:none; color:{color:links}; border-bottom:2px solid #beefed;"target="_blank" href="{Permalink}" class="user">{Username}</a>
+                {/block:IsActive}
+ 
+                {block:IsDeactivated}
+                    <span class="inactive deactivated">{Username}</span>
+                {/block:IsDeactivated}
+ 
+            </div>
+            <div class="reblog-content">
+                {Body}
+            </div>
+        </div>
+    {/block:Reblogs}
+</div>
+{/block:RebloggedFrom}</div>
+{/block:Text}
+
+<!-- photo posts -->
+{block:Photo}
+    <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" style="max-width:100%; border-radius:4px;"/>
+    {/block:Photo}
+
+{block:Panorama}
+    {LinkOpenTag}
+    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+    {LinkCloseTag}
+{/block:Panorama}
+
+<!-- photoset posts -->
+{block:Photoset}
+    {Photoset}
+{/block:Photoset}
+
+<!-- quote posts -->
+{block:Quote}
+    <div style="padding:20px; background:white; border-radius:4px">
+    <big> {Quote} </big>
+    <br>
+    {block:Source}
+    -{Source}
+    {/block:Source}<br>
+    </div>
+{/block:Quote}
+ 
+ <!-- link posts -->
+{block:Link}
+     <div style="padding:20px; background:white; border-radius:4px;">             <center>
+    <a style="text-decoration:none; color:{color:links}; border-bottom:2px solid #beefed;"href="{URL}" class="linkp" target="_blank"> {Name}</a>
+    </center> </div>
+{/block:Link}
+ 
+<!-- chat posts --> 
+ {block:Chat}
+    <div style="padding:20px; background:white; border-radius:4px">
+ {block:Title}<a style="text-decoration:none; color:{color:links}; border-bottom:2px solid #beefed;"href="{Permalink}" style="background:transparent; padding:0;"><h1>{title}</h1></a>{/block:Title}{block:Lines}<div class="chat">{block:Label}<b>{Label}</b>{/block:Label} {Line}<br/></div>{/block:Lines}
+ </div>
+ {/block:Chat}
+ 
+<!-- video posts -->               
+{block:Video}
+    <center> {Video-250}</center>
+{/block:Video}
+
+<!-- audio posts -->
+{block:Audio}
+     <div style="padding:20px; background:white; border-radius:4px">
+{block:AlbumArt}
+<div style="width:30%; margin:30px auto; border-radius:100%; overflow:hidden;position:relative; box-shadow:4px 4px 20px #f2f2f2;"><img src="{AlbumArtURL}" style="max-width:100%; display:block; border-radius:100%"></div>{/block:AlbumArt}
+<center>
+{block:TrackName}
+<b style="color:{color:username underline}">{TrackName}</b>
+{/block:TrackName} 
+<br>
+{block:Artist}{Artist}
+{/block:Artist} 
+ <br>
+{block:Album}
+ {Album}
+{/block:Album}
+</center>
+<div style="margin:30px auto; width:50%; overflow:hidden; border-radius:30px;
+height:50px; display:flex; align-items:center; justify-content:center; padding-left:20px; background:#f2f2f2; box-shadow:2px 2px 20px #f2f2f2;">{AudioPlayerWhite}</div>
+</div>
+{/block:Audio}
+ 
+ <!-- answer posts -->              
+ {block:Answer} 
+    <br><div style="padding:20px; background:white; border-radius:4px">
+    <div style="border:1px solid {color:border}; padding:20px;">{Asker} {text:asked}: {Question}</div><br>
+{block:Answerer}
+    <div class="speechbubble2" style="text-align:left;">{Answerer}: {Answer}      </div>
+    <br>
+{/block:Answerer}
+{block:NotReblog}
+    <div class="speechbubble2" style="text-align:left">{replies}</div>
+    {/block:NotReblog}
+    </div> 
+{/block:Answer}
+
+<!-- captions -->
+{block:Caption}
+    <div class="caption" style="margin-top:10px; padding:30px; border-radius:4px; background:#fefefe; {block:indexpage} display:none{/block:indexpage}"> {block:NotReblog}
+    <figcaption>
+        {Caption}
+    </figcaption>
+{/block:NotReblog}
+ 
+{block:RebloggedFrom}
+<div class="reblog-list">
+    {block:Reblogs}
+        <div class="{block:isOriginalEntry}original-reblog{/block:isOriginalEntry}">
+            <div class="reblog-header">
+ 
+                {block:IsActive}
+                <a style="text-decoration:none; color:{color:links};"class="{block:isNotOriginalEntry}sub-reblog{/block:isNotOriginalEntry}" href="{Permalink}" target="_blank">
+                    <img src="{PortraitURL-64}" style="width:24px; float:left">
+                </a>
+                {/block:IsActive}
+ 
+                {block:IsDeactivated}
+                <span class="inactive {block:isNotOriginalEntry} sub-reblog{/block:isNotOriginalEntry}">
+                    <img src="{PortraitURL-64}" style="width:24px; float:left">
+                </span>
+                {/block:IsDeactivated}
+ 
+                {block:IsActive}
+                   <a style="text-decoration:none; color:{color:links}; border-bottom:2px solid {color:username underline}; margin-left:10px;"target="_blank" href="{Permalink}" class="user">{Username}</a>
+                {/block:IsActive}
+ 
+                {block:IsDeactivated}
+                    <span class="inactive deactivated">{Username}</span>
+                {/block:IsDeactivated}
+ 
+            </div>
+            <div class="reblog-content">
+                {Body}
+            </div>
+        </div>
+    {/block:Reblogs}
+</div>
+{/block:RebloggedFrom}</div>
+                        {/block:Caption}
+ 
+ <!-- tags and post notes -->
+ {block:permalinkpage}<a href="{postnotesurl}" style="color:{color:links}; text-decoration:none;border-bottom:2px solid {color:tag underline}"> {lang:View notes for this post}</a>{/block:permalinkpage}
+           
+{block:HasTags}<div style="margin-top:10px {block:indexpage} display:none{/block:indexpage}"> <div class="tag">{block:tags} <a style="text-decoration:none; color:{color:links}; border-bottom:2px solid {color:tag underline};"href="{TagURL}">{text:tag symbol}{Tag}</a>{/block:tags}</div></div> {/block:HasTags}
+
+<!-- pagination -->
+<div style="text-align:center; margin:50px auto;">
+    {block:PermalinkPagination}
+    {block:PreviousPost}
+        <a href="{PreviousPost}" style="margin:10px;text-decoration:none; color:{color:pagination}">previous post</a>
+    {/block:PreviousPost}
+     
+    {block:NextPost}
+        <a href="{NextPost}" style="margin:10px; text-decoration:none;color: {color:pagination}">next post</a>
+    {/block:NextPost} 
+{/block:PermalinkPagination}
+           </div>    
+  </div>
+          
+<!--posts end-->{/block:Posts}
+        
+</main>
+
+<!-- footer -->
+<div style="margin:150px auto; text-align:center">
+    {block:Pagination}
+
+      {block:previousPage}<a href="{PreviousPage}"  style="text-decoration:none; color:{color:pagination}; margin:10px;"> previous page </a>{/block:PreviousPage}
+
+      {block:JumpPagination length="3"}
+            {block:CurrentPage}
+                  <span class="current_page"><span style="margin:10px; color:{color:current page}">{CurrentPage}</span></span>
+            {/block:CurrentPage}
+
+            {block:JumpPage}
+                  <a class="jump_page" href="{URL}" style="margin:10px; color:{color:jump page}; text-decoration:none;">{PageNumber}</a>
+            {/block:JumpPage}
+      {/block:JumpPagination}
+
+      {block:NextPage}
+            <a href="{NextPage}"  style="margin:10px; text-decoration:none; color:{color:pagination}">Next page</a>
+      {/block:NextPage}
+</div>
+{/block:Pagination}
+        <center>{block:DayPagination}{block:PreviousDayPage}
+                    <a href="{PreviousDayPage}" class="jump_page"  style="text-decoration:none;margin:10px; color:{color:pagination};">
+                        &#171; {ShortMonth} {DayOfMonth}
+                    </a>
+                {/block:PreviousDayPage}{block:NextDayPage}
+                    <a href="{NextDayPage}" class="jump_page"  style="text-decoration:none; margin:10px;color:{color:pagination}">
+                        {ShortMonth} {DayOfMonth} &#187;
+                    </a>
+                {/block:NextDayPage}{/block:DayPagination}
+                </div>
+    <footer style="padding:50px;margin:50px 0 0 0;  text-align:center; border-top:1px solid {color:border}; background:{color:footer}"><b>{name}</b> {CopyRightYears} <br>
+        Cafe theme by <a href="egg.design" style="color:{color:links}; border-bottom:2px solid {color:username underline}; text-decoration:none">egg designs</a>
+    </footer>
+    </body>
 </html>
